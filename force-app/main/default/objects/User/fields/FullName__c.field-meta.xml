@@ -2,7 +2,7 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>FullName__c</fullName>
     <externalId>false</externalId>
-    <formula>FirstName__c &amp; &quot; &quot;  &amp; LastName__c</formula>
+    <formula>FirstName &amp; &quot; &quot;  &amp;  LastName</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>FullName</label>
     <required>false</required>

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+		<members>Gestion_de_Proyectos</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
 		<members>Opportunity</members>
 		<members>OpportunityLineItem__c</members>
 		<members>ProjectLineItem__c</members>
@@ -12,11 +16,43 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>PMdashboards/LkZqYFfoJeKeiBsBZBczgPADcykrjE</members>
+		<members>PMdashboards/PaqyGxoJjfnEvcXfXdgwLOcnoIxbfy</members>
+		<name>Dashboard</name>
+	</types>
+	<types>
+		<members>*</members>
 		<name>Flow</name>
 	</types>
 	<types>
 		<members>*</members>
 		<name>GlobalValueSet</name>
+	</types>
+	<types>
+		<members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+		<members>Opportunity-Opportunity %28Sales%29 Layout</members>
+		<members>Opportunity-Opportunity %28Support%29 Layout</members>
+		<members>Opportunity-Opportunity Layout</members>
+		<members>OpportunityLineItem-Opportunity Product Layout</members>
+		<members>OpportunityLineItem__c-OpportunityLineItem Layout</members>
+		<members>ProjectLineItem__c-ProjectLineItem Layout</members>
+		<members>Project__c-PMLayout</members>
+		<members>Project__c-Project Layout</members>
+		<members>Task__c-Task Layout</members>
+		<members>TeamProgress__c-TeamProgress Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>PMreports/Status_of_total_Projects_M1W</members>
+		<members>PMreports/TotalHoursSold_vs_Hours_completed_5QO</members>
+		<members>PMreports/TotalProjectsCompleted_24j</members>
+		<members>PMreports/Total_Hours_Sold_vs_Hours_completed_now_CWw</members>
+		<members>PMreports/Total_Projects_Assigned_PSE</members>
+		<members>unfiled$public/flow_screen_prebuilt_report</members>
+		<name>Report</name>
 	</types>
 	<version>53.0</version>
 </Package>

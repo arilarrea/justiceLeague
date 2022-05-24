@@ -81,6 +81,20 @@
             </value>
         </assignmentItems>
         <assignmentItems>
+            <assignToReference>FirstName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ProjectManager__r.FirstName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>LastName</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ProjectManager__r.LastName</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
             <assignToReference>NewProject.ProjectManager__c</assignToReference>
             <operator>Assign</operator>
             <value>

@@ -16,6 +16,8 @@
     <tabs>standard-AnalyticsDataManager</tabs>
     <tabs>standard-home</tabs>
     <tabs>Project__c</tabs>
+    <tabs>OpportunityLineItem__c</tabs>
+    <tabs>ProjectLineItem__c</tabs>
     <uiType>Lightning</uiType>
     <utilityBar>Gesti_n_de_Proyectos_UtilityBar</utilityBar>
 </CustomApplication>
