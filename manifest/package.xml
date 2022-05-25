@@ -5,14 +5,6 @@
 		<name>ContentAsset</name>
 	</types>
 	<types>
-       <members>PMreports</members>
-       <name>ReportFolder</name>
-   </types>
-   <types>
-       <members>PMdashboards</members>
-       <name>DashboardFolder</name>
-   </types>
-	<types>
 		<members>Gestion_de_Proyectos</members>
 		<name>CustomApplication</name>
 	</types>
@@ -46,6 +38,14 @@
 	<types>
 		<members>*</members>
 		<name>GlobalValueSet</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>HomePageComponent</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>HomePageLayout</name>
 	</types>
 	<types>
 		<members>Opportunity-Opportunity %28Marketing%29 Layout</members>
