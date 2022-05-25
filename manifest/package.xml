@@ -9,6 +9,14 @@
 		<name>CustomApplication</name>
 	</types>
 	<types>
+       <members>PMreports</members>
+       <name>ReportFolder</name>
+   </types>
+   <types>
+       <members>PMdashboards</members>
+       <name>DashboardFolder</name>
+   </types>
+	<types>
 		<members>Opportunity</members>
 		<members>OpportunityLineItem__c</members>
 		<members>ProjectLineItem__c</members>
