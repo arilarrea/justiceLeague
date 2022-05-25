@@ -5,6 +5,14 @@
 		<name>ContentAsset</name>
 	</types>
 	<types>
+       <members>PMreports</members>
+       <name>ReportFolder</name>
+   </types>
+   <types>
+       <members>PMdashboards</members>
+       <name>DashboardFolder</name>
+   </types>
+	<types>
 		<members>Gestion_de_Proyectos</members>
 		<name>CustomApplication</name>
 	</types>
