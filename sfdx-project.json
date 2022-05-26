@@ -5,7 +5,7 @@
       "default": true
     }
   ],
-  "name": "TPFinal",
+  "name": "ProyectoFinal",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
   "sourceApiVersion": "54.0"
