@@ -101,6 +101,13 @@
                 <elementReference>FullName</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>NewProject.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.ProjectManager__r.Id</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>GetOppLineItem</targetReference>
         </connector>

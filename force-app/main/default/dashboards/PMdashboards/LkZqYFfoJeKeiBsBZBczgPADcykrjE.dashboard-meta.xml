@@ -48,7 +48,7 @@
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
             <rowIndex>0</rowIndex>
-            <rowSpan>8</rowSpan>
+            <rowSpan>7</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
             <colSpan>4</colSpan>
@@ -82,36 +82,12 @@
                 <sortBy>RowLabelAscending</sortBy>
                 <useReportChart>false</useReportChart>
             </dashboardComponent>
-            <rowIndex>8</rowIndex>
+            <rowIndex>7</rowIndex>
             <rowSpan>8</rowSpan>
         </dashboardGridComponents>
         <dashboardGridComponents>
-            <colSpan>3</colSpan>
-            <columnIndex>4</columnIndex>
-            <dashboardComponent>
-                <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
-                <chartSummary>
-                    <column>RowCount</column>
-                </chartSummary>
-                <componentType>Metric</componentType>
-                <decimalPrecision>-1</decimalPrecision>
-                <displayUnits>Auto</displayUnits>
-                <groupingSortProperties/>
-                <header>Status of total Projects</header>
-                <indicatorBreakpoint1>10.0</indicatorBreakpoint1>
-                <indicatorBreakpoint2>50.0</indicatorBreakpoint2>
-                <indicatorHighColor>#00716B</indicatorHighColor>
-                <indicatorLowColor>#C23934</indicatorLowColor>
-                <indicatorMiddleColor>#FFB75D</indicatorMiddleColor>
-                <report>PMreports/Status_of_total_Projects_M1W</report>
-                <showRange>false</showRange>
-            </dashboardComponent>
-            <rowIndex>8</rowIndex>
-            <rowSpan>5</rowSpan>
-        </dashboardGridComponents>
-        <dashboardGridComponents>
             <colSpan>4</colSpan>
-            <columnIndex>0</columnIndex>
+            <columnIndex>7</columnIndex>
             <dashboardComponent>
                 <autoselectColumnsFromReport>false</autoselectColumnsFromReport>
                 <chartSummary>
@@ -130,15 +106,15 @@
                 <report>PMreports/Total_Projects_Assigned_PSE</report>
                 <showRange>false</showRange>
             </dashboardComponent>
-            <rowIndex>16</rowIndex>
+            <rowIndex>7</rowIndex>
             <rowSpan>4</rowSpan>
         </dashboardGridComponents>
         <numberOfColumns>12</numberOfColumns>
         <rowHeight>36</rowHeight>
     </dashboardGridLayout>
-    <dashboardType>SpecifiedUser</dashboardType>
+    <dashboardType>MyTeamUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <runningUser>davidp5@justiceleague.com</runningUser>
+    <runningUser>justiceleague@plataforma5.com</runningUser>
     <textColor>#000000</textColor>
     <title>Welcome!</title>
     <titleColor>#000000</titleColor>

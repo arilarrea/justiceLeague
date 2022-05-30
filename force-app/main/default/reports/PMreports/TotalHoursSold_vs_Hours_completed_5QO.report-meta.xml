@@ -8,15 +8,6 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>TeamProgress__c.QuantityHours__c</field>
     </columns>
-    <filter>
-        <criteriaItems>
-            <column>Project__c.IsPM__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>1</value>
-        </criteriaItems>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -29,7 +20,7 @@
         <value>0</value>
     </params>
     <reportType>CustomEntityCustomEntity$Project__c$TeamProgress__c</reportType>
-    <scope>user</scope>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>false</showGrandTotal>
     <showSubTotals>false</showSubTotals>

@@ -3,15 +3,6 @@
     <columns>
         <field>CUST_NAME</field>
     </columns>
-    <filter>
-        <criteriaItems>
-            <column>Project__c.IsPM__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>1</value>
-        </criteriaItems>
-    </filter>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -24,7 +15,7 @@
         <value>1</value>
     </params>
     <reportType>CustomEntity$Project__c</reportType>
-    <scope>user</scope>
+    <scope>organization</scope>
     <showDetails>false</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>false</showSubTotals>

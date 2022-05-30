@@ -73,6 +73,10 @@
 		<members>Admin</members>
 		<name>Profile</name>
 	</types>
+		<types>
+		<members>ProjectManager</members>
+		<name>Profile</name>
+	</types>
 	<types>
 		<members>PMreports/Status_of_total_Projects_M1W</members>
 		<members>PMreports/TotalHoursSold_vs_Hours_completed_5QO</members>

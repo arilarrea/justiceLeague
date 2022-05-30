@@ -10,9 +10,6 @@
         <field>Project__c.FinalAmount__c</field>
     </columns>
     <columns>
-        <field>Project__c.IsPM__c</field>
-    </columns>
-    <columns>
         <field>Project__c.QuantityHours__c</field>
     </columns>
     <columns>
@@ -52,13 +49,6 @@
         <field>CUST_LAST_UPDATE</field>
     </columns>
     <filter>
-        <criteriaItems>
-            <column>Project__c.IsPM__c</column>
-            <columnToColumn>false</columnToColumn>
-            <isUnlocked>true</isUnlocked>
-            <operator>equals</operator>
-            <value>1</value>
-        </criteriaItems>
         <criteriaItems>
             <column>Project__c.Status__c</column>
             <columnToColumn>false</columnToColumn>
