@@ -16,9 +16,6 @@
         <field>Project__c.SoldRoles__c</field>
     </columns>
     <columns>
-        <field>Project__c.SquadLead__c</field>
-    </columns>
-    <columns>
         <field>Project__c.StartDate__c</field>
     </columns>
     <columns>

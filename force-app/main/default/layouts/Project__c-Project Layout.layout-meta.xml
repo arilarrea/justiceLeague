@@ -45,10 +45,6 @@
                 <behavior>Readonly</behavior>
                 <field>SoldRoles__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>SquadLead__c</field>
-            </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
     </layoutSections>
