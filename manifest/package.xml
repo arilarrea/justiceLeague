@@ -2,6 +2,10 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
 		<members>*</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>*</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>
@@ -27,14 +31,6 @@
 		<members>PMdashboards/PaqyGxoJjfnEvcXfXdgwLOcnoIxbfy</members>
 		<name>Dashboard</name>
 	</types>
-	<types>
-       <members>PMreports</members>
-       <name>ReportFolder</name>
-   </types>
-   <types>
-       <members>PMdashboards</members>
-       <name>DashboardFolder</name>
-   </types>
 	<types>
 		<members>*</members>
 		<name>FlexiPage</name>
