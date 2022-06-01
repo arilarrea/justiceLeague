@@ -36,6 +36,27 @@ public with sharing class AlocationService {
     return Database.query(finalQuery);    
   }
 
+  public static String allocationCreateByUser(String userId, String projectId, Date startDateR, Date endDateR){
+    Boolean validationUser = validateAvailabilityByUser (userId, startDateR, endDateR);
+    if(validationUser != true){
+      return 'El recurso no esta disponible en las fechas solicitadas';
+    }
+
+    User resourceData = [SELECT FirstName, LastName, Role__c FROM User WHERE id = :userId][0];
+    String teamName = resourceData.FirstName + ' ' + resourceData.LastName + ' - ' + resourceData.Role__c;
+    // creamos un objeto tipo TeamProgress__c
+    TeamProgress__c newTeamP = new TeamProgress__c(
+                                Name = teamName,
+                                Resource__c = userId,
+                                Project__c = projectId,
+                                StartDateAllocated__c = startDateR,
+                                EndDateAllocated__c = endDateR
+    );
+
+    insert newTeamP;
+    return 'Se creo la alocacion con exito';
+  }
+
   @AuraEnabled(cacheable=true)
   public static Boolean validateAvailabilityByUser (String userId, Date startDateR, Date endDateR) {
 
@@ -59,6 +80,7 @@ public with sharing class AlocationService {
       }
     }
     return response;
+
   }
 
   @AuraEnabled(cacheable=true)
