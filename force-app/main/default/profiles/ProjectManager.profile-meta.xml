@@ -6,7 +6,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <classAccesses>
-        <apexClass>alocationService</apexClass>
+        <apexClass>AlocationService</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <custom>true</custom>

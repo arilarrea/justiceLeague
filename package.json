@@ -27,8 +27,8 @@
     "eslint-plugin-jest": "^26.1.2",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
-    "prettier": "^2.6.0",
-    "prettier-plugin-apex": "^1.10.0"
+    "prettier": "2.6.2",
+    "prettier-plugin-apex": "1.10.0"
   },
   "lint-staged": {
     "**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}": [
@@ -37,5 +37,16 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
-  }
+  },
+  "main": "jest.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arilarrea/justiceLeague.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arilarrea/justiceLeague/issues"
+  },
+  "homepage": "https://github.com/arilarrea/justiceLeague#readme"
 }
