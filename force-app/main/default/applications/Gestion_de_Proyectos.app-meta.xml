@@ -21,6 +21,54 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Gestión de Proyectos</label>
     <navType>Standard</navType>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>test</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Project__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>test</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Project__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>test</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>Project__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>ProjectManager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>View</actionName>
+        <content>test</content>
+        <formFactor>Small</formFactor>
+        <pageOrSobjectType>Project__c</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>ProjectManager</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>HomePM</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>Admin</profile>
+    </profileActionOverrides>
+    <profileActionOverrides>
+        <actionName>Tab</actionName>
+        <content>HomePM</content>
+        <formFactor>Large</formFactor>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+        <type>Flexipage</type>
+        <profile>ProjectManager</profile>
+    </profileActionOverrides>
     <tabs>standard-AnalyticsDataManager</tabs>
     <tabs>standard-home</tabs>
     <tabs>Project__c</tabs>

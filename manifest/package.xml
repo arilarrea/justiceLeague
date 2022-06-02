@@ -6,6 +6,10 @@
 	</types>
 	<types>
 		<members>*</members>
+		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>*</members>
 		<name>ContentAsset</name>
 	</types>
 	<types>

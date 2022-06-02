@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>totalWorkDaysAmount__c</fullName>
+    <externalId>false</externalId>
+    <formula>((5 * ( FLOOR( ( EndDateAllocated__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( EndDateAllocated__c - DATE( 1900, 1, 8), 7 ) ) ) - (5 * ( FLOOR( ( StartDateAllocated__c - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( StartDateAllocated__c - DATE( 1900, 1, 8), 7 ) ) )) * Resource__r.RatePerHour__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>totalWorkDaysAmount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>
