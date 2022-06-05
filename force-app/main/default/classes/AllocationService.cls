@@ -6,10 +6,36 @@ public with sharing class AllocationService {
   @AuraEnabled(cacheable=true)
   public static List <ProjectLineItem__c> getRolesWhitoutAssignment (String projectId) {
     String query = 'SELECT '  
-                 + 'Id, Role__c, HoursPendingToAssign__c ' 
+                 + 'Id, Role__c, HoursPendingToAssign__c, QuantityHours__c, QuantityHoursAllocated__c ' 
                  + 'FROM ProjectLineItem__c ' 
                  + 'WHERE ProjectAssigned__c = : projectId '
                  + 'AND HoursPendingToAssign__c > 0 '
+                 + 'WITH SECURITY_ENFORCED ';
+    String finalQuery = String.escapeSingleQuotes(query);             
+    return Database.query(finalQuery); 
+  }
+
+  @AuraEnabled(cacheable=true)
+  public static List <ProjectLineItem__c> getTeamProgressesByProject (String projectId) {
+    String query = 'SELECT '  
+                 + 'Resource__r.Fullname__c, ' 
+                 + 'Resource__r.Role__c, '
+                 + 'QuantityHoursAllocated__c '
+                 + 'FROM teamProgress__c ' 
+                 + 'WHERE Project__c = : projectId '
+                 + 'WITH SECURITY_ENFORCED ';
+    String finalQuery = String.escapeSingleQuotes(query);             
+    return Database.query(finalQuery); 
+  }
+
+  @AuraEnabled(cacheable=true)
+  public static List <ProjectLineItem__c> getHoursPendingToAssignByRole (String projectId, String RoleName) {
+    String query = 'SELECT '  
+                 + 'HoursPendingToAssign__c ' 
+                 + 'FROM ProjectLineItem__c ' 
+                 + 'WHERE ProjectAssigned__c = : projectId '
+                 + 'AND HoursPendingToAssign__c > 0 '
+                 + 'AND Role__c = : RoleName '
                  + 'WITH SECURITY_ENFORCED ';
     String finalQuery = String.escapeSingleQuotes(query);             
     return Database.query(finalQuery); 
@@ -19,7 +45,7 @@ public with sharing class AllocationService {
   public static List <User> getResourcesByRole (String roleName){
 
     String query = 'SELECT '
-                 + 'Id ,FirstName,LastName,RatePerHour__c,Role__c '
+                 + 'Id ,FirstName,LastName,RatePerHour__c,Role__c,FullName__c '
                  + 'FROM User '
                  + 'WHERE  Role__c = : roleName '
                  + 'AND Role__c IN : TYPE_OF_ROLES '
@@ -28,7 +54,7 @@ public with sharing class AllocationService {
     return Database.query(finalQuery);    
   }
 
-  @AuraEnabled(cacheable=true)
+  @AuraEnabled
   public static String allocationCreate(String alocationJson){
 
     List<TeamProgress__c> teamPList = (List<TeamProgress__c>) JSON.deserialize(alocationJson, List<TeamProgress__c>.class);

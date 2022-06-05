@@ -14,7 +14,7 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>StartDateAllocate</assignToReference>
+            <assignToReference>StartDateAllocated</assignToReference>
             <operator>Assign</operator>
             <value>
                 <elementReference>$Record.StartDateAllocated__c</elementReference>
@@ -41,7 +41,7 @@
     <formulas>
         <name>hoursCalculated</name>
         <dataType>Number</dataType>
-        <expression>({!EndDateAllocated}-{!StartDateAllocate})*8</expression>
+        <expression>(((5 * ( FLOOR( ( {!EndDateAllocated} - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( {!EndDateAllocated} - DATE( 1900, 1, 8), 7 ) ) ) - (5 * ( FLOOR( ( {!StartDateAllocated} - DATE( 1900, 1, 8) ) / 7 ) ) + MIN( 5, MOD( {!StartDateAllocated} - DATE( 1900, 1, 8), 7 ) ) )))*8</expression>
         <scale>2</scale>
     </formulas>
     <interviewLabel>updateHoursAllocatedProjectLineItem {!$Flow.CurrentDateTime}</interviewLabel>
@@ -160,7 +160,7 @@
         <isOutput>false</isOutput>
     </variables>
     <variables>
-        <name>StartDateAllocate</name>
+        <name>StartDateAllocated</name>
         <dataType>Date</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>

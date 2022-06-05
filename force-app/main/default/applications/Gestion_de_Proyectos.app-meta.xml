@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>projects</content>
+        <formFactor>Small</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Project__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>projects</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Project__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
         <actionName>Tab</actionName>
         <content>HomePM</content>
         <formFactor>Large</formFactor>
@@ -21,38 +39,6 @@
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
     <label>Gestión de Proyectos</label>
     <navType>Standard</navType>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>test</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Project__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>test</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Project__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>Admin</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>test</content>
-        <formFactor>Large</formFactor>
-        <pageOrSobjectType>Project__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>ProjectManager</profile>
-    </profileActionOverrides>
-    <profileActionOverrides>
-        <actionName>View</actionName>
-        <content>test</content>
-        <formFactor>Small</formFactor>
-        <pageOrSobjectType>Project__c</pageOrSobjectType>
-        <type>Flexipage</type>
-        <profile>ProjectManager</profile>
-    </profileActionOverrides>
     <profileActionOverrides>
         <actionName>Tab</actionName>
         <content>HomePM</content>

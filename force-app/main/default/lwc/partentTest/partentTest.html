@@ -1,0 +1,11 @@
+<template>
+  <lightning-card title="Make a New Allocation">
+    <p class="slds-p-horizontal_small"></p>
+    <template for:each={rolesWithoutAssignment.data} for:item="role">
+      <div key={role}>
+        <c-child-test role={role} record-id={recordId}></c-child-test>
+      </div>
+    </template>
+    <p slot="footer"></p>
+  </lightning-card>
+</template>
