@@ -4,9 +4,9 @@ trigger AllocationRequest on TeamProgress__c (before insert) {
     if (teamProgressBadList.size()>0){
         for(TeamProgress__c teamProgressBad : teamProgressBadList){
             teamProgressBad.addError(
-                'NO PUEDE ALOCAR EL RECURSO ' 
+                'You Can not Allocate the resource ' 
                 + teamProgressBad.Name
-                + ' EN LA FECHA INDICADA ' 
+                + ' on the indicated date ' 
                 + teamProgressBad.StartDateAllocated__c + ' - ' 
                 + teamProgressBad.EndDateAllocated__c);
         }
