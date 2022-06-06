@@ -12,7 +12,10 @@ public with sharing class AllocationRequestHelper {
         }
 
         //Se traen todos los TeamProgress de los usuarios
-        List<TeamProgress__c> teamProgressList = [SELECT  Resource__c, StartDateAllocated__c, EndDateAllocated__c, Project__c FROM  TeamProgress__c WHERE Resource__c IN  :resourcesIdsSet];
+        /*CAMBIO MODELO DE DATOS
+            List<TeamProgress__c> teamProgressList = [SELECT  Resource__c, StartDateAllocated__c, EndDateAllocated__c, Project__c FROM  TeamProgress__c WHERE Resource__c IN  :resourcesIdsSet];
+        FIN CAMBIO MODELO DE DATOS*/
+        List<TeamProgress__c> teamProgressList = [SELECT  Resource__c, StartDateAllocated__c, EndDateAllocated__c FROM  TeamProgress__c WHERE Resource__c IN  :resourcesIdsSet];
 
         //recorrer Lista de TeamProRequestedList (todos los usuarios y fechas que se solicita alocar)
         for(TeamProgress__c teamPR :TeamProRequestedList){
@@ -50,6 +53,7 @@ public with sharing class AllocationRequestHelper {
           return response;
     }
 
+    /*
     private static void updateProjectLI(List<TeamProgress__c> teamProgressApproved){
         // recorrer el teamProgressApproved y llenar el set de ids
         Set <String> resourcesIdsSet = new Set <String>();
@@ -144,6 +148,7 @@ public with sharing class AllocationRequestHelper {
         System.debug('Los nuevos seran ' +pliForUpdate);
 
     }
+    */
 
     public static Integer calculateWorkingDays(Date startDate, Date endDate){          
          
