@@ -1,5 +1,6 @@
 <template>
-  <lightning-card title="Make a New Allocation">
+  <template if:true={rolesWithoutAssignment}>
+    <lightning-card title="Make a New Allocation">
     <p class="slds-p-horizontal_small"></p>
     <template for:each={rolesWithoutAssignment.data} for:item="role">
       <div key={role}>
@@ -8,4 +9,5 @@
     </template>
     <p slot="footer"></p>
   </lightning-card>
+  </template>
 </template>
