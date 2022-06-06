@@ -56,7 +56,7 @@ export default class ChildTest extends LightningElement {
     );
 
     console.log("Inputs con formato json --->", inputsItems);
-    allocationCreate({ alocationJson: inputsItems })
+    allocationCreate({ alocationJson: inputsItems , projectID : this.recordId})
       .then((res) => {
         console.log("res es --->", res);
         this.dispatchEvent(

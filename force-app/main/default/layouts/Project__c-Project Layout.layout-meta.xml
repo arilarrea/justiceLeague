@@ -23,6 +23,10 @@
                 <behavior>Required</behavior>
                 <field>EndDate__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>totalHoursPendingToAssign__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -50,10 +54,6 @@
         <layoutColumns/>
         <style>CustomLinks</style>
     </layoutSections>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>TeamProgress__c.Project__c</relatedList>
-    </relatedLists>
     <relatedLists>
         <fields>NAME</fields>
         <relatedList>ProjectLineItem__c.ProjectAssigned__c</relatedList>

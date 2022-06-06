@@ -86,5 +86,9 @@
 		<members>ProjectManager</members>
 		<name>Role</name>
 	</types>
+	<types>
+		<members>unfiled$public/Quantity_Hours_Detail_Uwe/</members>
+		<name>Report</name>
+	</types>
 	<version>53.0</version>
 </Package>
