@@ -65,7 +65,7 @@ public with sharing class AllocationService {
 
     insert teamPListWithPLI;
 
-    return 'Se creo la alocacion con exito';
+    return 'successful allocation :) ';
   }
   
   private static List <TeamProgress__c> addProjectLI(List <TeamProgress__c> teamProgressList, String projectID){
