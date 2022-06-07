@@ -13,6 +13,10 @@
         <apexClass>AllocationService</apexClass>
         <enabled>true</enabled>
     </classAccesses>
+    <classAccesses>
+        <apexClass>LoadedServiceHours</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <custom>false</custom>
     <fieldPermissions>
         <editable>true</editable>
@@ -317,10 +321,16 @@
         <layout>ProjectLineItem__c-ProjectLineItem Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>Project__c-PMLayout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Task__c-Task Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
         <layout>TeamProgress__c-TeamProgress Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>User-User Layout</layout>
     </layoutAssignments>
     <objectPermissions>
         <allowCreate>true</allowCreate>
@@ -389,6 +399,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
+        <tab>Task__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
         <tab>TeamProgress__c</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
@@ -397,6 +411,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AIViewInsightObjects</name>
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivateContract</name>
@@ -1084,6 +1102,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewHelpLink</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewMLModels</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
