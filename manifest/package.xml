@@ -85,7 +85,15 @@
 		<name>Profile</name>
 	</types>
 	<types>
-		<members>*</members>
+		<members>PMreports/Status_of_total_Projects_M1W</members>
+		<members>PMreports/TotalHoursSold_vs_Hours_completed_5QO</members>
+		<members>PMreports/TotalProjectsCompleted_24j</members>
+		<members>PMreports/Total_Hours_Sold_vs_Hours_completed_now_CWw</members>
+		<members>PMreports/Total_Projects_Assigned_PSE</members>
+		<members>unfiled$public/New_amount_projects_Report_Awn/</members>
+		<members>unfiled$public/New_amount_projects_Report_Ekn/</members>
+		<members>unfiled$public/New_projectLI_Projects_Report_JsQ/</members>
+		<members>unfiled$public/Quantity_Hours_Detail_Uwe/</members>
 		<name>Report</name>
 	</types>
 	<types>
@@ -96,5 +104,13 @@
         <members>*</members>
         <name>LightningComponentBundle</name>
     </types>
+	<types>
+		<members>Projects_with_ProjectLineItems_with_TeamProgresses</members>
+		<members>Projects_with_ProjectLineItems_with_TeamProgresses_with_Tasks</members>
+		<members>SoldedAmount_vs_FinalAmount</members>
+		<members>amount_projects</members>
+		<members>projectLI_Projects</members>
+		<name>ReportType</name>
+	</types>
 	<version>53.0</version>
 </Package>
