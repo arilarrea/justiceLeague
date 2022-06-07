@@ -73,6 +73,7 @@
 		<members>Project__c-PMLayout</members>
 		<members>Task__c-Task Layout</members>
 		<members>TeamProgress__c-TeamProgress Layout</members>
+		<members>User-User Layout</members>
 		<name>Layout</name>
 	</types>
 	<types>
