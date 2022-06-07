@@ -15,6 +15,10 @@
                 <behavior>Required</behavior>
                 <field>AssignedResource__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>EstimatedHours__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

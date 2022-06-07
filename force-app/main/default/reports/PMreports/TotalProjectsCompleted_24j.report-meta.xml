@@ -7,9 +7,6 @@
         <field>Project__c.EndDate__c</field>
     </columns>
     <columns>
-        <field>Project__c.FinalAmount__c</field>
-    </columns>
-    <columns>
         <field>Project__c.QuantityHours__c</field>
     </columns>
     <columns>

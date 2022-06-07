@@ -108,11 +108,14 @@ public with sharing class AllocationService {
     resourcesIdsSet.add(teamP.Resource__c);
     }
     //traer datos de los usuarios
-    Map <Id, User> dataUserMap = new Map <Id, User>([SELECT FirstName, LastName, Role__c FROM User WHERE Id IN :resourcesIdsSet]);
+    Map <Id, User> dataUserMap = new Map <Id, User>([SELECT FirstName, LastName, Role__c, RatePerHour__c FROM User WHERE Id IN :resourcesIdsSet]);
     //agrega los nombres a los teamProgress
     for(TeamProgress__c teamP : teamProgressList){
+      Decimal teamRatePerHour =0;
       String teamName = dataUserMap.get(teamP.Resource__c).FirstName + ' - ' + dataUserMap.get(teamP.Resource__c).Role__c;
       teamP.Name = teamName;
+      teamRatePerHour = dataUserMap.get(teamP.Resource__c).RatePerHour__c;
+      teamP.RatePerHour__c = teamRatePerHour;
       newTeamProgressList.add(teamP);
     }
     return newTeamProgressList;

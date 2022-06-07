@@ -3,9 +3,9 @@
     <fullName>FinalAmount__c</fullName>
     <externalId>false</externalId>
     <label>FinalAmount</label>
-    <precision>18</precision>
-    <required>true</required>
-    <scale>2</scale>
+    <summarizedField>ProjectLineItem__c.AmountPerRole__c</summarizedField>
+    <summaryForeignKey>ProjectLineItem__c.ProjectAssigned__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
     <trackTrending>false</trackTrending>
-    <type>Currency</type>
+    <type>Summary</type>
 </CustomField>

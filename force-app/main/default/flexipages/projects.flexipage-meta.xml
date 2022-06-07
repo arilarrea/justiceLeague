@@ -12,6 +12,13 @@
                     <value>1440</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>label</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>reportFilter</name>
+                    <value>Project__c.Id</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>reportName</name>
                     <value>Quantity_Hours_Detail_Uwe</value>
                 </componentInstanceProperties>
@@ -165,6 +172,13 @@
                 <componentInstanceProperties>
                     <name>cacheAge</name>
                     <value>1440</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>label</name>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>reportFilter</name>
+                    <value>Project__c.Id</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>reportName</name>

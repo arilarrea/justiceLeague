@@ -9,10 +9,16 @@
             <axisBinding>y</axisBinding>
             <column>Project__c.ProjectLineItems__r$QuantityHours__c</column>
         </chartSummaries>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>Project__c.ProjectLineItems__r$QuantityHoursAllocated__c</column>
+        </chartSummaries>
         <chartType>VerticalColumn</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
         <groupingColumn>Project__c.ProjectLineItems__r$Role__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>true</showAxisLabels>
         <showPercentage>false</showPercentage>
@@ -29,6 +35,10 @@
         <aggregateTypes>Sum</aggregateTypes>
         <field>Project__c.ProjectLineItems__r$QuantityHours__c</field>
     </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Project__c.ProjectLineItems__r$QuantityHoursAllocated__c</field>
+    </columns>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -41,12 +51,12 @@
         <value>0</value>
     </params>
     <reportType>projectLI_Projects__c</reportType>
-    <scope>user</scope>
+    <scope>organization</scope>
     <showDetails>false</showDetails>
-    <showGrandTotal>true</showGrandTotal>
+    <showGrandTotal>false</showGrandTotal>
     <showSubTotals>false</showSubTotals>
     <timeFrameFilter>
         <dateColumn>Project__c$CreatedDate</dateColumn>
-        <interval>INTERVAL_CURRENT</interval>
+        <interval>INTERVAL_CUSTOM</interval>
     </timeFrameFilter>
 </Report>

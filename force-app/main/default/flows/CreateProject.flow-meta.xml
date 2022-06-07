@@ -60,13 +60,6 @@
             </value>
         </assignmentItems>
         <assignmentItems>
-            <assignToReference>NewProject.FinalAmount__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Amount</elementReference>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
             <assignToReference>NewProject.OppId__c</assignToReference>
             <operator>Assign</operator>
             <value>
@@ -208,7 +201,7 @@
         <recordTriggerType>Update</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Draft</status>
     <variables>
         <name>FirstName</name>
         <dataType>String</dataType>

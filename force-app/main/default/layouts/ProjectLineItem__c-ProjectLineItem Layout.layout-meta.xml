@@ -30,6 +30,10 @@
                 <behavior>Readonly</behavior>
                 <field>QuantityHoursAllocated__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Readonly</behavior>
+                <field>AmountPerRole__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
