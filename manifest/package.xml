@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>*</members>
+		<name>Flow</name>
+	</types>
+	<types>
+		<members>ProjectLineItem__c.CanNotModifyStatusInProgress</members>
+		<members>Project__c.CanNotModifyStatusInProgress</members>
+		<members>Project__c.CanNotPassToInprogress</members>
+		<members>Task__c.CanNotModifyStatusInProgress</members>
+		<members>TeamProgress__c.CanNotModifyStatusInProgress</members>
+		<members>TeamProgress__c.ThereIsAlreadySquadLead</members>
+		<name>ValidationRule</name>
+	</types>
+	<version>53.0</version>
+</Package>

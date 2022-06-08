@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ThereIsAlreadySquadLead</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT( ISBLANK( ProjectLineItem__r.ProjectAssigned__r.SquadLead__c ) ) &amp;&amp;  NOT( ProjectLineItem__r.ProjectAssigned__r.SquadLead__c  =  Resource__r.FullName__c ) &amp;&amp;  SquadLead__c</errorConditionFormula>
+    <errorDisplayField>SquadLead__c</errorDisplayField>
+    <errorMessage>There is already Squad Lead assigned</errorMessage>
+</ValidationRule>

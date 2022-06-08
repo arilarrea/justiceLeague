@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CanNotModifyStatusInProgress</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL( ProjectLineItem__r.ProjectAssigned__r.Status__c ,&apos;In Progress&apos;)</errorConditionFormula>
+    <errorMessage>You can not modify any field beause the project is in progress stage</errorMessage>
+</ValidationRule>

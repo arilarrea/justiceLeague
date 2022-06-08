@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CanNotModifyStatusInProgress</fullName>
+    <active>true</active>
+    <errorConditionFormula>ISPICKVAL(ProjectAssigned__r.Status__c , &apos;In Progress&apos;) &amp;&amp; NOT(ISPICKVAL(ProjectAssigned__r.Status__c, &apos;Completed&apos;) )</errorConditionFormula>
+    <errorMessage>You can not delete or add more hours or Roles to the project because it is in the Progress stage</errorMessage>
+</ValidationRule>
