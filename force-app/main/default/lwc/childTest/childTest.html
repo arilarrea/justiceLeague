@@ -1,0 +1,32 @@
+<template>
+  <div>
+    <template if:true={role}>
+      <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_small slds-text-align_center">
+          <strong>Role:</strong> {role.Role__c} -
+          <span>
+            <strong> Time Pending: </strong> {hoursPendingToAssign} Hours.
+          </span>
+        </h2>
+      </div>
+    </template>
+
+    <template if:true={resList.data}>
+      <lightning-datatable
+        key-field="Id"
+        data={resList.data}
+        columns={columns}
+        onsave={saveHandleAction}
+        draft-values={fldsItemValues}
+        hide-checkbox-column
+      >
+      </lightning-datatable>
+    </template>
+    <br />
+  </div>
+  <!-- <lightning-button label="Show Toast" onclick={showToast}>
+            </lightning-button>
+             -->
+  <!-- <lightning-button label="Testear alert" onclick={testMethod}>
+  </lightning-button> -->
+</template>

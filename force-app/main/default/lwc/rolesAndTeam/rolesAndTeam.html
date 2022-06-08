@@ -1,0 +1,37 @@
+<template>
+    <lightning-card>
+      <div class="slds-m-top_medium slds-m-bottom_x-large">
+        <h2 class="slds-text-heading_small slds-text-align_center">
+          <strong>Summarized</strong>
+        </h2>
+      </div>
+      <template if:true={rolesAllocated.data}>
+        <lightning-datatable
+          key-field="Id"
+          data={rolesAllocated.data}
+          columns={columns}
+          onsave={saveHandleAction}
+          draft-values={fldsItemValues}
+          hide-checkbox-column
+        >
+        </lightning-datatable>
+      </template>
+      <br />
+      <div>
+        <h2 class="slds-text-heading_small slds-text-align_center">
+          <strong>Allocations Detail By Resource</strong>
+        </h2>
+      </div>
+      <template if:true={teamProgress}>
+        <lightning-datatable
+          class="datatable"
+          data={teamProgress}
+          columns={columnsTeamProgress}
+          key-field="Id"
+          hide-checkbox-column
+        >
+        </lightning-datatable>
+      </template>
+      <p slot="footer"></p>
+    </lightning-card>  
+</template>

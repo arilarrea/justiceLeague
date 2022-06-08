@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinalAmount__c</fullName>
+    <externalId>false</externalId>
+    <label>FinalAmount</label>
+    <summarizedField>ProjectLineItem__c.AmountPerRole__c</summarizedField>
+    <summaryForeignKey>ProjectLineItem__c.ProjectAssigned__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,6 +1,52 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
+       <members>PMreports</members>
+       <name>ReportFolder</name>
+   </types>
+   <types>
+       <members>PMdashboards</members>
+       <name>DashboardFolder</name>
+   </types>
+	<types>
+		<members>*</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ApexTrigger</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>ContentAsset</name>
+	</types>
+	<types>
+		<members>Gestion_de_Proyectos</members>
+		<name>CustomApplication</name>
+	</types>
+	<types>
+		<members>Opportunity</members>
+		<members>OpportunityLineItem__c</members>
+		<members>ProjectLineItem__c</members>
+		<members>Project__c</members>
+		<members>Task__c</members>
+		<members>TeamProgress__c</members>
+		<members>User</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>CustomTab</name>
+	</types>
+	<types>
+		<members>PMdashboards/PaqyGxoJjfnEvcXfXdgwLOcnoIxbfy</members>
+		<name>Dashboard</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>FlexiPage</name>
+	</types>
+	<types>
 		<members>*</members>
 		<name>Flow</name>
 	</types>
@@ -12,6 +58,61 @@
 		<members>TeamProgress__c.CanNotModifyStatusInProgress</members>
 		<members>TeamProgress__c.ThereIsAlreadySquadLead</members>
 		<name>ValidationRule</name>
+		<members>*</members>
+		<name>GlobalValueSet</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>HomePageComponent</name>
+	</types>
+	<types>
+		<members>*</members>
+		<name>HomePageLayout</name>
+	</types>
+	<types>
+		<members>Opportunity-Opportunity %28Marketing%29 Layout</members>
+		<members>Opportunity-Opportunity %28Sales%29 Layout</members>
+		<members>Opportunity-Opportunity %28Support%29 Layout</members>
+		<members>Opportunity-Opportunity Layout</members>
+		<members>OpportunityLineItem-Opportunity Product Layout</members>
+		<members>OpportunityLineItem__c-OpportunityLineItem Layout</members>
+		<members>ProjectLineItem__c-ProjectLineItem Layout</members>
+		<members>Project__c-PMLayout</members>
+		<members>Task__c-Task Layout</members>
+		<members>TeamProgress__c-TeamProgress Layout</members>
+		<members>User-User Layout</members>
+		<name>Layout</name>
+	</types>
+	<types>
+		<members>Admin</members>
+		<name>Profile</name>
+	</types>
+	<types>
+		<members>ProjectManager</members>
+		<name>Profile</name>
+	</types>
+	<types>
+		<members>unfiled$public/New_projectLI_Projects_Report_JsQ</members>
+		<members>unfiled$public/New_amount_projects_Report_Ekn</members>
+		<members>unfiled$public/New_amount_projects_Report_Awn</members>
+		<members>unfiled$public/Quantity_Hours_Detail_Uwe</members>
+		<name>Report</name>
+	</types>
+	<types>
+		<members>ProjectManager</members>
+		<name>Role</name>
+	</types>
+	<types>
+        <members>*</members>
+        <name>LightningComponentBundle</name>
+    </types>
+	<types>
+		<members>Projects_with_ProjectLineItems_with_TeamProgresses</members>
+		<members>Projects_with_ProjectLineItems_with_TeamProgresses_with_Tasks</members>
+		<members>SoldedAmount_vs_FinalAmount</members>
+		<members>amount_projects</members>
+		<members>projectLI_Projects</members>
+		<name>ReportType</name>
 	</types>
 	<version>53.0</version>
 </Package>
