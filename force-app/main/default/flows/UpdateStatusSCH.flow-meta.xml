@@ -81,7 +81,7 @@
             </value>
         </inputParameters>
     </actionCalls>
-    <apiVersion>55.0</apiVersion>
+    <apiVersion>54.0</apiVersion>
     <decisions>
         <name>MailPMHoursPendingToAssign</name>
         <label>MailPMHoursPendingToAssign</label>
@@ -95,7 +95,7 @@
             <name>MailPM</name>
             <conditionLogic>and</conditionLogic>
             <conditions>
-                <leftValueReference>$Record.TotalHoursPendingToAssing__c</leftValueReference>
+                <leftValueReference>$Record.TotalHoursPendingToAssign__c</leftValueReference>
                 <operator>GreaterThan</operator>
                 <rightValue>
                     <numberValue>0.0</numberValue>
@@ -237,7 +237,7 @@
     <textTemplates>
         <name>MailHoursLeftToAssign</name>
         <isViewedAsPlainText>true</isViewedAsPlainText>
-        <text>&lt;p&gt;Dear {!$Record.ProjectManager__c},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The project of {!$Record.OppId__r.Account.Name} have {!$Record.TotalHoursPendingToAssing__c} hours to left assign.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind Regards,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;p&gt;SalesforceFlow&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+        <text>&lt;p&gt;Dear {!$Record.ProjectManager__c},&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The project of {!$Record.OppId__r.Account.Name} have {!$Record.TotalHoursPendingToAssign__c} hours to left assign.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Kind Regards,&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;p&gt;SalesforceFlow&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
     </textTemplates>
     <textTemplates>
         <name>MailInLoss</name>

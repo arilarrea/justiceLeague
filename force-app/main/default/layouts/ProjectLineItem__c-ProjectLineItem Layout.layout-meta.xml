@@ -22,18 +22,6 @@
                 <behavior>Readonly</behavior>
                 <field>Name</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>HoursPendingToAssign__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>QuantityHoursAllocated__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>AmountPerRole__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns/>
         <style>TwoColumnsTopToBottom</style>
@@ -71,10 +59,6 @@
         <fields>QuantityHours__c</fields>
         <fields>Role__c</fields>
     </miniLayout>
-    <relatedLists>
-        <fields>NAME</fields>
-        <relatedList>TeamProgress__c.ProjectLineItem__c</relatedList>
-    </relatedLists>
     <showEmailCheckbox>false</showEmailCheckbox>
     <showHighlightsPanel>false</showHighlightsPanel>
     <showInteractionLogPanel>false</showInteractionLogPanel>
