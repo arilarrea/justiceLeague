@@ -32,7 +32,7 @@ public with sharing class LoadedServiceHours {
             return ls;
     }
 
-    @AuraEnabled(cacheable=true)
+    @AuraEnabled(cacheable=false)
     public static String updateTaskStatus(String taskId, String newStatus) {
 
         Task__c taskToUpdate = [SELECT Id, Status__c 

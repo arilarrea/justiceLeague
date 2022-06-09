@@ -1,0 +1,43 @@
+<template>
+    <div>
+      <template if:true={project}>
+        <div class="slds-m-top_medium slds-m-bottom_x-large">
+          <h2 class="slds-text-heading_small slds-text-align_center">
+            <strong>Project:</strong>  {project.Name} <span>
+              <strong>Task Pending: </strong> {project.expr0}
+            </span>
+          </h2>
+        </div>
+      </template>
+      <template if:true={resList}>
+        <c-my-Types
+          key-field="Id"
+          data={resList}
+          columns={columns}
+          hide-checkbox-column
+          show-row-number-column
+        >
+        </c-my-Types>
+        <!-- <lightning-datatable
+          key-field="Id"
+          name="datatable1"
+          data={resList.data}
+          columns={columns}
+          onrowaction={onRowAction}
+          onsave={saveHandle}
+          max-row-selection="1"
+        >
+        </lightning-datatable> -->
+      </template>
+      <br />
+
+      
+    </div>
+    
+    <lightning-button label="Mark as Completed" onclick={testMethod}> </lightning-button>
+    <!-- <lightning-button label="Show Toast" onclick={showToast}>
+             
+               -->
+    <!-- <lightning-button label="Testear alert" onclick={testMethod}>
+    </lightning-button> -->
+  </template>

@@ -1,0 +1,13 @@
+<template>
+    <template if:true={pendingTasksCount}>
+      <lightning-card title="Load hours">
+      <p class="slds-p-horizontal_small"></p>
+      <template for:each={pendingTasksCount.data} for:item="project">
+        <div key={project}>
+          <c-child-task project={project} project-id={project.id} ></c-child-task>
+        </div>
+      </template>
+      <p slot="footer"></p>
+    </lightning-card>
+    </template>
+  </template>
