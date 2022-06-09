@@ -11,6 +11,7 @@ const FINISH_BUTTON_ICON = "action:check";
 const START_BUTTON_LABEL = "START";
 const FINISH_BUTTON_LABEL = "FINISH";
 const RECORD_BUTTON_VARIANT ="brand-outline";
+const RECORD_BUTTON_DISABLE = "disabled";
 
 
 const columns = [
@@ -22,11 +23,6 @@ const columns = [
     label: "Estimated hours",
     fieldName: "EstimatedHours__c",
     type: "number",
-    // typeAttributes: {
-    //   status: {
-    //     fieldName: 'status'
-    //   }
-    // }
   },
   {
     label: "Registered hours",
@@ -37,7 +33,13 @@ const columns = [
     label: "Add Hours",
     fieldName: "RecordHours__c",
     type: "customAddHours",
-    initialWidth: 150 
+    initialWidth: 150 ,
+    typeAttributes: {
+      disableButton: {
+        fieldName: 'disableButton'
+      }
+
+    }
   },
   {
     label: "Actions",
@@ -57,7 +59,7 @@ const columns = [
       variantRecordButton: {
         fieldName: 'variantRecordButton'
       },
-      currentStatus: {
+      Status__c: {
         fieldName: 'Status__c'
       },
       taskId: {
@@ -66,60 +68,20 @@ const columns = [
 
     }
   },
-  // {
-  //   type: "button", label: "Actions", typeAttributes: 
-  //   {  
-  //     label: 'Start',  
-  //     name: 'Start',  
-  //     title: 'Start',  
-  //     disabled: false,  
-  //     value: 'view',  
-  //     iconPosition: 'left'  
-  //   },
-  // },
+
 ];
 
 export default class ChildTask extends LightningElement {
+  
+  //privates
+  change = 0;
   columns = columns; //esto no se toca, son las columnas
-  @api project
   fldsItemValues = [];
+  newHours=0
+
+  @api project
   usrId= uId;
   @track resList;
-
-// action;
-// selectedrow;
-
-onRowAction(event){
-
-  const action = event.detail.action
-
-  const row = event.detail.row;
-
-  switch (action.name) {
-    
-
-    case 'Start':
-      console.log("COLUMNAS", this.columns[4])
-
-    this.columns = [
-      { label: "Task name", fieldName: "Name" },
-      { label: "Status", fieldName: "Status__c", type: "text" },
-      {
-        label: "Stimated hours",
-        fieldName: "EstimatedHours__c",
-        type: "text"
-      },
-      {
-        label: "Registered hours",
-        fieldName: "RecordHours__c",
-        type: "text",
-      },
-      {type: "number", label: "Actions", editable: true }
-    
-    ];
-      break;
-        }
-}
 
 saveHandle(event) {
   this.fldsItemValues = event.detail.draftValues;
@@ -156,24 +118,26 @@ saveHandle(event) {
 }
 
 @wire(getPendingTaskbyResourceAndProject, {
- userId: '$usrId', projectId: '$project.Id'
+ userId: '$usrId', projectId: '$project.Id', current: "$change"
 })
 taskPending(result, error) {
   if (result.data) {
     // Process record data
     this.resList = result.data.map((record) => {
-      console.log('que es record -->', record);
+      //console.log('que es record -->', record);
 
       let variantButton = record.Status__c === 'Not Started' ? START_BUTTON_VARIANT : FINISH_BUTTON_VARIANT;
       let labelButton = record.Status__c === 'Not Started' ? START_BUTTON_LABEL: FINISH_BUTTON_LABEL;
       let iconButton = record.Status__c === 'Not Started' ? START_BUTTON_ICON: FINISH_BUTTON_ICON;
       let variantRecordButton = record.Status__c === 'In Progress' ? RECORD_BUTTON_VARIANT: null;
+      let disableButton = record.Status__c === 'In Progress' ? '' : RECORD_BUTTON_DISABLE; 
 
       return {...record, 
           'variantButton': variantButton, 
           'labelButton':labelButton,
           'iconButton':iconButton,
           'variantRecordButton':variantRecordButton,
+          'disableButton':disableButton
       }
   });
      console.log("TaskPending son", this.resList);
@@ -183,16 +147,38 @@ taskPending(result, error) {
     this.resList = undefined
   }
 }
+
+handleStatusUpdated(event){
+
+  if(event.target.value){
+    this.newHours = event.target.value
+    console.log('event.target.value desde chield-handleStatusUpdated es: ', event.target.value);
+  }
+  console.log('entro a handleStatusUpdated')
+  
+
+  this.change +=1;
+  return this.dispatchEvent(new CustomEvent('refresh', {
+    composed: true,
+    bubbles: true
+}));
+}
+
+handleAddHours(event){
+  console.log('entro a handleAddHours')
+
+  console.log('algo cambio Padre ', event.detail);
+}
+
 testMethod(){
   console.log("SOY UN TEST Y FUNCIONO");
-  var abc = this.template.querySelector('lightning-datatable')
-  // console.log(this.project.Id);
+  console.log('newHours desde chield - es -->', this.newHours);
   // console.log("USUARIO" ,this.usrId);
 
   console.log("RESLIST",abc.data)
 }
-// async refresh() {
-//   await refreshApex(this.resList);
-// }
+ async refresh() {
+   await refreshApex(this.resList);
+ }
 
 }

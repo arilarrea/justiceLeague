@@ -1,0 +1,11 @@
+<template>
+    <div class="slds-p-around_x-small">  
+      <template if:false={typeAttributes.disableButton}>
+        <lightning-input type="number" name="input1" label="Enter a number"  onchange={handleInpuntChange} ></lightning-input>
+      </template> 
+      <template if:true={typeAttributes.disableButton}>
+        <lightning-input type="number" name="input1" label="Enter a number" disabled></lightning-input>
+      </template>     
+        <!-- <lightning-input type="number" name="input3" placeholder="add hours" class="slds-m-left_x-small"></lightning-input> -->
+    </div>
+</template>

@@ -26,11 +26,12 @@ export default class MyTypes extends LightningDatatable {
         customButtonGroup: {
             template: customButtonGroup,
             standardCellLayout: false,
-            typeAttributes:['variantButton', 'labelButton', 'iconButton', 'variantRecordButton', 'currentStatus' , 'taskId'],
+            typeAttributes:['variantButton', 'labelButton', 'iconButton', 'variantRecordButton', 'Status__c' , 'taskId'],
         },
         customAddHours: {
             template: customAddHours,
             standardCellLayout: true,
+            typeAttributes:['disableButton'],
         }
         // Other types here
     }

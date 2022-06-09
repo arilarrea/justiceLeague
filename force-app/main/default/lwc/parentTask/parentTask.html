@@ -4,7 +4,7 @@
       <p class="slds-p-horizontal_small"></p>
       <template for:each={pendingTasksCount.data} for:item="project">
         <div key={project}>
-          <c-child-task project={project} project-id={project.id} ></c-child-task>
+          <c-child-task project={project} project-id={project.id} onrefresh={handleStatusUpdated}></c-child-task>
         </div>
       </template>
       <p slot="footer"></p>

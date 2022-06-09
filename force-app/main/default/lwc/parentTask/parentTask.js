@@ -4,10 +4,12 @@ import uId from '@salesforce/user/Id';
 
 //getPendingTaskbyResourceAndProject
 export default class ParentTask extends LightningElement {
-
+//private
 pendingTasksCount;
 usrId= uId;
-@wire(getPendingTaskbyResourceCount,{userId: '$usrId' })
+change = 0;
+
+@wire(getPendingTaskbyResourceCount,{userId: '$usrId' , change: '$change' })
 getTask(result, error){
     if(result){
         console.log("user", this.usrId)
@@ -16,6 +18,11 @@ getTask(result, error){
     }else if(error){
         this.pendingTasksCount = undefined;
     }
+}
+
+handleStatusUpdated(event){
+    console.log('test de evento')
+    this.change +=1;
 }
 
 }

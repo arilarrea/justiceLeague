@@ -4,41 +4,42 @@ import { ShowToastEvent } from "lightning/platformShowToastEvent";
 
 export default class EditableRecord extends LightningElement {
 @api typeAttributes;
-@api currentStatus
+@api status;
+@api newHours;
 
-// taskId=JSON.stringify(typeAttributes.taskId);
+newStatus
 
 handleUpdate(){
-    console.log('ENTRO.......', this.currentStatus )
+    console.log('typeAttributes', this.typeAttributes )
+    console.log('currentStatus.......', this.status )
 
-    // const inputsItems = JSON.parse(
-    //     this.typeAttributes.slice().map((draft) => {
-    //       return draft;
-    //     })
-    // )
-    // console.log('inputs ', inputsItems)
 
-    // if(this.typeAttributes.Status__c == 'In Progress'){
-    //     this.newStatus = "Completed"
-    //     console.log("if --->", this.newStatus);
-    // }else if(this.typeAttributes.Status__c == 'Not Started'){
-    //     this.newStatus = "In Progress"
-    //     console.log("if --->", this.newStatus);
-    // }
+    if(this.status == 'In Progress'){
+        this.newStatus = "Completed"
+        //console.log("if --->", this.newStatus);
+    }else if(this.status == 'Not Started'){
+        this.newStatus = "In Progress"
+       // console.log("if --->", this.newStatus);
+    }
         
-    updateTaskStatus({taskId: this.typeAttributes.taskId , newStatus: this.typeAttributes.Status__c})
+    updateTaskStatus({taskId: this.typeAttributes.taskId , newStatus: this.newStatus})
     .then((res) => {
-        console.log("res es --->", res);
-        this.dispatchEvent(
-          new ShowToastEvent({
-            title: "Success",
-            message: res,
-            variant: "success"
-          })
-        );
-        // this.fldsItemValues = [];
-        // this.change += 1;
-        // return this.refresh();
+            console.log("res es --->", res);
+            this.dispatchEvent(
+                new ShowToastEvent({
+                    title: "Success",
+                    message: res,
+                    variant: "success"
+                })
+            );
+            // this.fldsItemValues = [];
+            // this.change += 1;
+            //  return this.refresh();
+        return this.dispatchEvent(new CustomEvent('refresh', {
+            composed: true,
+            bubbles: true
+        }));
+       
       })
       .catch((error) => {
         console.log(error);
@@ -52,10 +53,19 @@ handleUpdate(){
           })
         );
       })
-    console.log('ENTRO.......', this.typeAttributes )
-    console.log('Current status.......', this.currentStatus )
-
-    
+    // console.log('Current status.......', this.currentStatus )
+   
+   
 }
+
+handleTest(){
+    console.log('entro al handleTest' , ' el que debe hacer el wire');
+    // console.log('newHours es -->', this.newHours);
+    // return this.dispatchEvent(new CustomEvent('addHours', {
+    //     composed: true,
+    //     bubbles: true
+    // }));
+}
+
 
 }
