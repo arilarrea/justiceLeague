@@ -30,8 +30,8 @@ export default class MyTypes extends LightningDatatable {
         },
         customAddHours: {
             template: customAddHours,
-            standardCellLayout: true,
-            typeAttributes:['disableButton'],
+            standardCellLayout: false,
+            typeAttributes:['disableButton', 'taskId'],
         }
         // Other types here
     }

@@ -14,8 +14,9 @@
           key-field="Id"
           data={resList}
           columns={columns}
-          refresh={handleStatusUpdated}
-          onchange={handleAddHours}
+          onrefresh={handleStatusUpdated}
+          oninputchange={handleAddHours}
+          onsummarize={handleSummarize}
           hide-checkbox-column
           show-row-number-column
         >

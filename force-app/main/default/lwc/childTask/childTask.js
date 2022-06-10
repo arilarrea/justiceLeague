@@ -33,10 +33,13 @@ const columns = [
     label: "Add Hours",
     fieldName: "RecordHours__c",
     type: "customAddHours",
-    initialWidth: 150 ,
+    initialWidth: 350 ,
     typeAttributes: {
       disableButton: {
         fieldName: 'disableButton'
+      },
+      taskId: {
+        fieldName: 'Id'
       }
 
     }
@@ -45,7 +48,7 @@ const columns = [
     label: "Actions",
     fieldName: "RecordHours__c",
     type: "customButtonGroup",
-    initialWidth: 350 ,
+    initialWidth: 150 ,
     typeAttributes: {
       variantButton: {
         fieldName: 'variantButton'
@@ -77,7 +80,7 @@ export default class ChildTask extends LightningElement {
   change = 0;
   columns = columns; //esto no se toca, son las columnas
   fldsItemValues = [];
-  newHours=0
+  newHours
 
   @api project
   usrId= uId;
@@ -166,16 +169,18 @@ handleStatusUpdated(event){
 
 handleAddHours(event){
   console.log('entro a handleAddHours')
-
-  console.log('algo cambio Padre ', event.detail);
+  console.log('algo cambio Padre ', event.detail.value);
 }
+
+handleSummarize(event){
+console.log('Entro al summarize')
+console.log(event.target)}
 
 testMethod(){
   console.log("SOY UN TEST Y FUNCIONO");
   console.log('newHours desde chield - es -->', this.newHours);
   // console.log("USUARIO" ,this.usrId);
 
-  console.log("RESLIST",abc.data)
 }
  async refresh() {
    await refreshApex(this.resList);

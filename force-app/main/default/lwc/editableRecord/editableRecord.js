@@ -61,10 +61,10 @@ handleUpdate(){
 handleTest(){
     console.log('entro al handleTest' , ' el que debe hacer el wire');
     // console.log('newHours es -->', this.newHours);
-    // return this.dispatchEvent(new CustomEvent('addHours', {
-    //     composed: true,
-    //     bubbles: true
-    // }));
+    return this.dispatchEvent(new CustomEvent('summarize', {
+        composed: true,
+        bubbles: true
+    }));
 }
 
 

@@ -44,7 +44,7 @@ public with sharing class LoadedServiceHours {
             return 'Successfully Updated';
     }
 
-    @AuraEnabled(cacheable=true)
+    @AuraEnabled(cacheable=false)
     public static String addTaskRecordHours(String taskId, Integer numberHours) {
 
         Task__c taskToUpdate = [SELECT Id, RecordHours__c 

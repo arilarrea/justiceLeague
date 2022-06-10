@@ -1,7 +1,14 @@
 <template>
     <div class="slds-p-around_x-small">  
       <template if:false={typeAttributes.disableButton}>
-        <lightning-input type="number" name="input1" label="Enter a number"  onchange={handleInpuntChange} ></lightning-input>
+        <div>
+          <lightning-input input-id={typeAttributes.taskId} type="number" name="input1" label="Enter a number"  onchange={handleInpuntChange} class="slds-m-left_xx-small" ></lightning-input>
+        </div>
+        <div>
+          <lightning-button-icon icon-name="utility:new" id={typeAttributes.taskId}  variant="brand" alternative-text="Add hours" class="slds-m-left_xx-small" title="Add hours" onclick={handlesaveHours}></lightning-button-icon>
+        </div>
+        
+        <!-- <lightning-button variant="brand"  label="Add Hours" title="add hours" icon-name="utility:record_update" class="slds-m-left_x-small" ></lightning-button> -->
       </template> 
       <template if:true={typeAttributes.disableButton}>
         <lightning-input type="number" name="input1" label="Enter a number" disabled></lightning-input>
